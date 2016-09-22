@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Enriqueta" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/main.css" />
+    </head>
+<body>
+    
+    <div class="header">
+        <img alt="SUNY Geneseo" src="img/logo.png" />
+    </div>
+
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Course Search: Anthropology</h2>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <select id="instructors" class="form-control"></select>
+            </div>
+            <div class="col-md-1 loading">
+                <img alt="Loading..." src="img/loading.gif" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Course</th>
+                            <th>Section</th>
+                            <th>Title</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Put javascript calls at the bottom of the page. 
+         See https://developer.yahoo.com/performance/rules.html#js_bottom for more information
+    -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="js/jsonpath-0.8.0.js"></script>
+    <script src="js/sprintf.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+/* main.css */
+
+body {
+    font-family: "Enriqueta", serif;
+}
+.header {
+    background-color: #345290;
+    padding: 10px;
+    height: 64px;
+}
+.header img {
+    height: 40px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
