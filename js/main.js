@@ -36,9 +36,8 @@ $(document).ready(function() {
                 return 0;
             });
             
-            // Now that the array is sorted, we can loop through it to populate the SELECT 
-            // element in the DOM.
-            // We only want to add instructors that do not exist. 
+            // Now that the array is sorted, we can loop through it to populate the select 
+            // element in the DOM. We only want to add instructors that do not exist. 
             var template = '<option value="%s">%s, %s</option>';
             var optionElements = [];
             optionElements.push('<option value="">--Select an instructor--</option>');
@@ -55,7 +54,7 @@ $(document).ready(function() {
                 }
             }
             
-            // Append the OPTION elements to the DOM.
+            // Append the option elements to the DOM.
             // Also, set the font so that it's consistent.
             $('#instructors')
                 .empty()
@@ -65,9 +64,8 @@ $(document).ready(function() {
         }
     });
     
-    // Add an event handler for the Search button.
-    // When the button is pressed, the page will display the courses
-    // for that instructor.
+    // Add an event handler for the select element.
+    // When it changes, we want to display the courses for that instructor.
     $('select').on('change', function(e) {
         e.preventDefault();
         var username = $(this).val();
@@ -83,9 +81,9 @@ $(document).ready(function() {
             url: 'https://knightweb.geneseo.edu/bannerdatafeed/CourseSearch/courseSearch',
             data: { 'instructor': username },
             success: function(json) {
-                
                 // We don't need jsonPath here - we can just read from the json object as it is.
                 // So, let's populate the rows.
+                // TODO: Use something like datatables here.
                 var rows = [];
                 for (var i = 0; i < json.length; i++) {
                     rows.push(
